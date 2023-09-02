@@ -15,9 +15,7 @@ namespace ConsoleApp.model
 
         public Genero Genero { get; set; }
 
-        public virtual decimal CalculoCusto()
-        {
-            return 0;
-        }
+        public abstract decimal CalculoCusto();
+        
     }
 }
