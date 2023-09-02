@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp.model
 {
-    internal abstract class Pessoa : ICusto
+    internal abstract class Pessoa
     {
         public Guid IdRegister { get; set; }
         
