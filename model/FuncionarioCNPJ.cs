@@ -12,13 +12,13 @@ namespace ConsoleApp.model
     internal class FuncionarioCNPJ : Pessoa
     {
         public decimal ValorHora { get; set; }
-        public decimal QuantHoraTrabalhada {get; set; }
+        public decimal QuantHoraTrabalhada { get; set; }
 
-        public string? CNPJ {get; set; }
+        public string? CNPJ { get; set; }
 
         public decimal CalculoHoraExtra(string horasExtras)
         {
-            return ValorHora * (QuantHoraTrabalhada + int.Parse(horasExtras)); 
+            return ValorHora * (QuantHoraTrabalhada + int.Parse(horasExtras));
         }
 
         public void AumentoValorHora(string valor)

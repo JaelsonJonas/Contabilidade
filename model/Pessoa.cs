@@ -16,6 +16,11 @@ namespace ConsoleApp.model
         public Genero Genero { get; set; }
 
         public abstract decimal CalculoCusto();
+
+        public string NomeComRegistro()
+        {
+            return $"Nome: {Nome} - Registo: {IdRegister}";
+        }
         
     }
 }

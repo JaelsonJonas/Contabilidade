@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp.repositores
 {
-    internal interface IFuncionarioCLTDao : IGenericDao<FuncionarioCLT,Guid>
+    internal interface IFuncionarioCLTDao : IGenericDao<FuncionarioCLT, Guid>
     {
     }
 }

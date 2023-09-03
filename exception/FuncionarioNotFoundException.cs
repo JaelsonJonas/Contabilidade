@@ -8,6 +8,6 @@ namespace ConsoleApp.exception
 {
     internal class FuncionarioNotFoundException : Exception
     {
-        public FuncionarioNotFoundException(string msg) : base(msg) { }    
+        public FuncionarioNotFoundException(string msg) : base(msg) { }
     }
 }

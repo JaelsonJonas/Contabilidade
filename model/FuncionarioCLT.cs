@@ -33,5 +33,7 @@ namespace ConsoleApp.model
               $"Possui Cargo de Confiança: {(CargoConfianca ? "Sim" : "Não")}\n";
         }
 
+
+
     }
 }

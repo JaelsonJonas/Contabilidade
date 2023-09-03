@@ -9,7 +9,7 @@ using ConsoleApp.repositores;
 
 namespace ConsoleApp.dao
 {
-    internal class FuncionarioCLTDao : GenericDao<FuncionarioCLT,Guid> , IFuncionarioCLTDao
+    internal class FuncionarioCLTDao : GenericDao<FuncionarioCLT, Guid>, IFuncionarioCLTDao
     {
         public FuncionarioCLTDao(IList<FuncionarioCLT> lista) : base(lista)
         {

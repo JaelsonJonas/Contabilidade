@@ -9,23 +9,23 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp.dao
 {
-    internal abstract class GenericDao<T,K> : IGenericDao<T, K> where T : Pessoa
+    internal abstract class GenericDao<T, K> : IGenericDao<T, K> where T : Pessoa
     {
         private readonly IList<T> _lista;
-        
-        public GenericDao(IList<T> lista ) { _lista = lista; }
-        
+
+        public GenericDao(IList<T> lista) { _lista = lista; }
+
         public decimal CalculoCustoTotal()
+        {
+            decimal total = 0;
+
+            foreach (T funcionario in _lista)
             {
-                decimal total = 0;
-                
-                    foreach (T funcionario in _lista)
-                    {
-                        total += funcionario.CalculoCusto();
-                    }
-                    return total;
-                
+                total += funcionario.CalculoCusto();
             }
+            return total;
+
+        }
 
         public int CountAll()
         {
@@ -63,7 +63,7 @@ namespace ConsoleApp.dao
             }
             else
             {
-                Console.WriteLine("Nenhum funcionario cadastrado!\n");
+                throw new FuncionarioNotFoundException("Sem registro de funcionario");
             }
 
         }
@@ -73,5 +73,24 @@ namespace ConsoleApp.dao
             funcionario.IdRegister = Guid.NewGuid();
             _lista.Add(funcionario);
         }
+
+        public void GetNameWithRegister()
+        {
+            if (_lista.Count > 0)
+            {
+                Console.WriteLine("Segue lista de Funcionarios: \n");
+                foreach (T func in _lista)
+                {
+                    Console.WriteLine(func.NomeComRegistro() + "\n");
+                }
+            }
+            else
+            {
+                throw new FuncionarioNotFoundException("Sem registro de funcionario");
+            }
+
+
+        }
+
     }
 }
