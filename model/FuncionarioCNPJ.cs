@@ -33,12 +33,12 @@ namespace ConsoleApp.model
 
         public override string ToString()
         {
-            return $"Registro: {IdRegister}\n" +
-          $"Nome: {Nome}\n" +
-          $"Gênero: {Genero}\n" +
-          $"Valor Hora: {ValorHora}\n" +
-          $"Quantidade Hora Trabalhada: {QuantHoraTrabalhada}\n" +
-          $"CNPJ: {CNPJ}\n";
+            return $"Registro: {IdRegister}" + Environment.NewLine +
+          $"Nome: {Nome}" + Environment.NewLine +
+          $"Gênero: {Genero}" + Environment.NewLine +
+          $"Valor Hora: {ValorHora}" + Environment.NewLine +
+          $"Quantidade Hora Trabalhada: {QuantHoraTrabalhada}" + Environment.NewLine +
+          $"CNPJ: {CNPJ}";
         }
 
     }

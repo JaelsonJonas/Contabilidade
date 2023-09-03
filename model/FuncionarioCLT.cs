@@ -26,11 +26,11 @@ namespace ConsoleApp.model
 
         public override string ToString()
         {
-            return $"Registro: {IdRegister}\n" +
-              $"Nome: {Nome}\n" +
-              $"Gênero: {Genero}\n" +
-              $"Salário: {Salario}\n" +
-              $"Possui Cargo de Confiança: {(CargoConfianca ? "Sim" : "Não")}\n";
+            return $"Registro: {IdRegister}" + Environment.NewLine +
+              $"Nome: {Nome}" + Environment.NewLine +
+              $"Gênero: {Genero}" + Environment.NewLine +
+              $"Salário: {Salario}" + Environment.NewLine +
+              $"Possui Cargo de Confiança: {(CargoConfianca ? "Sim" : "Não")}";
         }
 
 
