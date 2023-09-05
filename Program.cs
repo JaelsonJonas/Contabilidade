@@ -270,17 +270,36 @@ while (_inputOK)
 
             break;
         case 2:
+            try
+            {
+                _DaoClt.ListAll();
+                LimpaConsole();
+            }
+            catch (FuncionarioNotFoundException e)
+            {
+                Console.WriteLine(e.Message);
+                LimpaConsole();
+            }
+            
 
-            _DaoClt.ListAll();
-
-            LimpaConsole();
-
+           
             break;
         case 3:
 
-            _DaoCnpj.ListAll();
+           
+            try
+            {
+                _DaoCnpj.ListAll();
 
-            LimpaConsole();
+                LimpaConsole();
+            }
+            catch (FuncionarioNotFoundException e)
+            {
+                Console.WriteLine(e.Message);
+                LimpaConsole();
+            }
+
+
 
             break;
         case 4:
